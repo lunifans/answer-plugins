@@ -38,6 +38,8 @@ const useRenderFormula = (element: HTMLElement | RefObject<HTMLElement> | null) 
         { left: '\\begin{gather}', right: '\\end{gather}', display: true },
         { left: '\\(', right: '\\)', display: false },
         { left: '\\[', right: '\\]', display: true },
+        // ★ 在这里加入这一行（注意逗号）
+    { left: '$', right: '$', display: false },
       ],
       throwOnError: false,
     });
