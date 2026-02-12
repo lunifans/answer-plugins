@@ -26,19 +26,11 @@ const useRenderFormula = (element: HTMLElement | RefObject<HTMLElement> | null) 
   const render = (element) => {
     katexRender(element, {
       delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '$$<br>', right: '<br>$$', display: true },
-        {
-          left: '\\begin{equation}',
-          right: '\\end{equation}',
-          display: true,
-        },
-        { left: '\\begin{align}', right: '\\end{align}', display: true },
-        { left: '\\begin{alignat}', right: '\\end{alignat}', display: true },
-        { left: '\\begin{gather}', right: '\\end{gather}', display: true },
-        { left: '\\(', right: '\\)', display: false },
-        { left: '\\[', right: '\\]', display: true },
-      ],
+      { left: '$$', right: '$$', display: true },
+      { left: '$', right: '$', display: false },
+      { left: '\\(', right: '\\)', display: false },
+      { left: '\\[', right: '\\]', display: true }
+    ],
       throwOnError: false,
     });
   };
